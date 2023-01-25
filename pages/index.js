@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  console.log(data);
+
   const [information, setInformation] = useState([...data])
 
 
@@ -23,23 +23,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <h1>Minecraft Institute of Technology</h1>
+      <div className={styles.nav}>
+        <Link href="/">Home</Link>
         <Link href="about">About</Link>
+      </div>
+      <main className={styles.main}>
+
+
         {
           information && information.map((info, index) => {
             if (info.department.toLowerCase() === "business") {
               return (
-                <Card key={index} degree={info.degree} colour="red" font="10px"/>
+                <Card key={index} degree={info.degree} />
               )
             }
           })
         }
-        
+
         {
           information && information.map((info, index) => {
             if (info.department.toLowerCase() === "computing") {
               return (
-                <Card key={index} degree={info.degree} colour="blue" font="50px"/>
+                <Card key={index} degree={info.degree} />
               )
             }
           })

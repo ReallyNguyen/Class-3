@@ -75,8 +75,9 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
+  padding: 25px;
   margin: 0;
+  border-radius: 20px;;
 }
 
 html,
@@ -87,12 +88,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #329632;
 }
 
 a {
@@ -104,4 +100,20 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+
+}
+
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
